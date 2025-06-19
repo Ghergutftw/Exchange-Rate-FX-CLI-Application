@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "8d23d52f-c527-4574-809d-f251f7092870",
+		"name": "Order-Service - OpenAPI definition",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23466371"
+	},
+	"item": [
+		{
+			"name": "Create a new FX order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"investmentCcy\": \"EUR\",\n  \"buy\": true,\n  \"counterCcy\": \"USD\",\n  \"limit\": 1.21,\n  \"validUntil\": \"24.12.2026\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8888/createOrder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"createOrder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cancel an existing FX order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\"YOUR_ORDER_ID_HERE\""
+				},
+				"url": {
+					"raw": "http://localhost:8888/cancelOrder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"cancelOrder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Returns all currency pairs, supported by the service",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8888/supportedCurrencyPairs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"supportedCurrencyPairs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve all existing FX orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8888/retrieveOrders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"retrieveOrders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Returns a snapshot of the current FX rates",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8888/rateSnapshot",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"rateSnapshot"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

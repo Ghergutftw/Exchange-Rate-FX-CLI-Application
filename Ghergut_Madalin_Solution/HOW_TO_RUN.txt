@@ -1,0 +1,29 @@
+//RO
+
+Trebuie întai ca jar-ul order-service.jar sa ruleze
+
+java -jar order-service.jar
+
+Urmat de rularea codului in sine care este solution.jar
+
+java -jar solution.jar
+
+L-am facut incat sa anunte daca nu exista order-service care ruleaza deja.
+
+Va multumesc,
+
+Ghergut Madalin
+
+//EN
+
+First, the JAR file order-service.jar must be running:
+
+java -jar order-service.jar
+Followed by running the main code, which is solution.jar:
+
+java -jar solution.jar
+I have implemented it so that it will notify you if order-service is not already running.
+
+Thank you,
+
+Gherguț Mădălin
